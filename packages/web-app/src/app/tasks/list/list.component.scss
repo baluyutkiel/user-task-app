@@ -1,0 +1,173 @@
+// .container {
+//   justify-content: space-around;
+
+//   .action-button-row {
+//     display: flex;
+//     justify-content: flex-start;
+//     gap: var(--layout-gap-size);
+//   }
+
+//   .tasks {
+//     display: inline-flex;
+//     flex-direction: column;
+//     margin: 5px;
+//     width: min(calc(100vw - var(--layout-padding)), var(--layout-width-max));
+//     gap: var(--layout-gap-size);
+
+//     mat-card {
+//       padding: var(--layout-padding);
+//       &.complete {
+//         background-color: var(--success-color);
+//       }
+//       .high-priority {
+//         color: var(--error-color);
+//       }
+//     }
+//   }
+// }
+
+
+.container {
+  justify-content: space-around;
+
+  .task-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+  
+    h1 {
+      font-size: 40px;
+      font-weight: bold;
+      color: #dee4ec; // Dark gray-blue for modern look
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  
+    h3 {
+      font-size: 20px;
+      color: #dee4ec; // Soft blue for better visibility
+      font-weight: 600;
+      margin-top: 5px;
+    }
+  
+    .task-count {
+      font-weight: bold;
+      background: #f44336; // Red badge for count
+      color: white;
+      padding: 5px 12px;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+  }
+
+  .action-button-row {
+    display: flex;
+    justify-content: left; // Center align the button
+    margin-bottom: 20px;
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 18px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 25px;
+      background-color: #007BFF; // Modern blue
+      color: white;
+      transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    }
+  
+    button:hover {
+      background-color: #0056b3; // Darker blue on hover
+      transform: scale(1.05);
+    }
+  
+    button:active {
+      transform: scale(0.95);
+    }
+  
+    mat-icon {
+      font-size: 20px;
+    }
+  }
+
+  .tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: min(calc(100vw - 40px), 800px);
+    margin: 0 auto; // Center align task list
+
+    mat-card {
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+      border-left: 3px solid black;
+
+      &.complete {
+        background-color: #044f0ae0; // Light green for completed tasks
+        opacity: 0.7;
+      }
+
+      &.default-bg {
+        background-color: #564d4daf; // ✅ Light gray default color (neutral & clean)
+      }
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      mat-card-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: whitesmoke;
+      }
+
+      mat-card-header {
+        font-size: 18px;
+        color: #d5d4d4;
+        margin-bottom: 8px;
+      }
+
+      mat-card-content {
+        font-size: 16px;
+        color: #d5d4d4;
+      }
+
+      .high-priority {
+        color: red;
+        font-weight: bold;
+      }
+
+      mat-card-footer {
+        font-size: 17px;
+        font-weight: bold;
+        color: red;
+        margin-top: 10px;
+      }
+
+      mat-card-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 12px;
+
+        button {
+          border-radius: 40px;
+          padding: 6px 12px;
+          font-weight: bold;
+          transition: all 0.3s ease-in-out;
+        }
+
+        button:hover {
+          filter: brightness(90%);
+        }
+      }
+    }
+  }
+}

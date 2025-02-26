@@ -1,0 +1,100 @@
+// .container {
+//   justify-content: space-around;
+
+//   form {
+//     display: inline-flex;
+//     flex-direction: column;
+//     margin: 5px;
+//     width: min(calc(100vw - var(--layout-padding)), var(--layout-width-max));
+//     gap: var(--layout-gap-size);
+
+//     .action-button-row {
+//       display: flex;
+//       justify-content: center;
+//       gap: var(--layout-gap-size);
+//     }
+//   }
+// }
+
+.container {
+  justify-content: space-around;
+  text-align: center;
+
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #dee4ec; // Dark gray-blue for modern look
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  form {
+    display: inline-flex;
+    flex-direction: column;
+    margin: 5px;
+    width: min(calc(100vw - var(--layout-padding)), var(--layout-width-max));
+    gap: var(--layout-gap-size);
+
+    .action-button-row {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--layout-gap-size);
+
+      /* ✅ Primary Add Button */
+      button[data-testid="add-task"] {
+        background: linear-gradient(to right, #007bff, #0056b3);
+        color: white;
+        font-weight: bold;
+        border-radius: 6px;
+        padding: 12px 20px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      button[data-testid="add-task"]:hover {
+        background: linear-gradient(to right, #0056b3, #003f7f);
+        transform: scale(1.05);
+      }
+
+      button[data-testid="add-task"]:active {
+        transform: scale(0.98);
+      }
+
+      button[data-testid="add-task"]:disabled {
+        background: #b0b0b0 !important; /* Grey when disabled */
+        color: #ffffff !important;
+        cursor: not-allowed;
+        transform: none;
+        opacity: 0.6;
+      }
+
+      button[data-testid="cancel"] {
+        background: rgba(216, 54, 81, 0.679);
+        color: whitesmoke;
+        border: 1px solid #ccc;
+        font-weight: 500;
+        border-radius: 6px;
+        padding: 12px 20px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      button[data-testid="cancel"]:hover {
+        background: rgba(157, 12, 36, 0.561);
+        transform: scale(1.05);
+      }
+
+      button[data-testid="cancel"]:active {
+        transform: scale(0.98);
+      }
+      
+    }
+  }
+}
+
+::ng-deep .mat-mdc-text-field-wrapper {
+  background: white !important;
+}
+
+
+
+
+
