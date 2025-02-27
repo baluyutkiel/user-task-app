@@ -23,7 +23,7 @@
   h1 {
     font-size: 40px;
     font-weight: bold;
-    color: #dee4ec; // Dark gray-blue for modern look
+    color: #dee4ec;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
@@ -40,7 +40,6 @@
       justify-content: space-between;
       gap: var(--layout-gap-size);
 
-      /* ✅ Primary Add Button */
       button[data-testid="add-task"] {
         background: linear-gradient(to right, #007bff, #0056b3);
         color: white;
@@ -60,7 +59,7 @@
       }
 
       button[data-testid="add-task"]:disabled {
-        background: #b0b0b0 !important; /* Grey when disabled */
+        background: #b0b0b0 !important; 
         color: #ffffff !important;
         cursor: not-allowed;
         transform: none;

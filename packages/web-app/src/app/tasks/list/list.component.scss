@@ -40,21 +40,21 @@
     h1 {
       font-size: 40px;
       font-weight: bold;
-      color: #dee4ec; // Dark gray-blue for modern look
+      color: #dee4ec;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
   
     h3 {
       font-size: 20px;
-      color: #dee4ec; // Soft blue for better visibility
+      color: #dee4ec;
       font-weight: 600;
       margin-top: 5px;
     }
   
     .task-count {
       font-weight: bold;
-      background: #f44336; // Red badge for count
+      background: #f44336;
       color: white;
       padding: 5px 12px;
       border-radius: 10px;
@@ -64,7 +64,7 @@
 
   .action-button-row {
     display: flex;
-    justify-content: left; // Center align the button
+    justify-content: left;
     margin-bottom: 20px;
 
     button {
@@ -75,13 +75,13 @@
       font-size: 16px;
       font-weight: bold;
       border-radius: 25px;
-      background-color: #007BFF; // Modern blue
+      background-color: #007BFF;
       color: white;
       transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
     }
   
     button:hover {
-      background-color: #0056b3; // Darker blue on hover
+      background-color: #0056b3;
       transform: scale(1.05);
     }
   
